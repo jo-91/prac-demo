@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<project name="welcome" default="run" >
+<!--
+<target name="info">
+<echo>welcome to ant 
+${ant.project.name} 
+${ant.version} 
+${basedir}
+${ant.file}
+${ant.core.lib}
+${ant.basedir}
+${ant.home}
+${ant.project.default-target}
+
+</echo>
+</target>
+
+
+-->
+<target name="run" depends="compile">
+<java classname="A">
+<classpath path ="example"/>
+</java>
+</target>
+
+<target name="compile">
+<javac includeantruntime="false" srcdir="./example" destdir="example"/>
+</target>
+
+</project>
